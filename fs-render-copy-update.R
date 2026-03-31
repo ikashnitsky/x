@@ -24,12 +24,6 @@ fs::file_copy(
 
 # 4R/um newsletter --------------------------------------------------------
 
-
-# update qmd from the newsletter.md
-
-
-write_lines(c(yaml_head, news), "dev/newsletter.qmd", append = FALSE)
-
 # a function to wrap each section in callout notes
 wrap_sections_in_callouts <- function(
         input_path,
@@ -69,6 +63,8 @@ wrap_sections_in_callouts <- function(
 
 news <- read_lines("x:/gh/4Rum/newsletter.md", skip = 6) # don't include April eyt
 yaml_head <- read_lines("dev/newsletter.qmd", n_max = 14)
+# update qmd from the newsletter.md
+write_lines(c(yaml_head, news), "dev/newsletter.qmd", append = FALSE)
 wrap_sections_in_callouts("dev/newsletter.qmd", "dev/4rum-news.qmd")
 quarto_render(input = "dev/4rum-news.qmd")
 
