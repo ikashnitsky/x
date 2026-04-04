@@ -13,11 +13,20 @@ library(quarto)
 
 # sys-prompts -------------------------------------------------------------
 
-
 quarto_render(input = "x:/gh/ai-tune/sys-prompts/sys-prompts.qmd")
 fs::file_copy(
   path = "x:/gh/ai-tune/sys-prompts/sys-prompts.html",
   new_path = "dev/sys-prompts.html",
+  overwrite = TRUE
+)
+
+
+# openspace -------------------------------------------------------------
+
+quarto_render(input = "x:/gh/ai-tune/openspace/openspace-setup.qmd")
+fs::file_copy(
+  path = "x:/gh/ai-tune/openspace/openspace-setup.html",
+  new_path = "dev/openspace-setup.html",
   overwrite = TRUE
 )
 
