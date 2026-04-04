@@ -14,9 +14,9 @@ library(quarto)
 # sys-prompts -------------------------------------------------------------
 
 
-quarto_render(input = "x:/ikx/PROJECTS/sys-prompts/sys-prompts.qmd")
+quarto_render(input = "x:/gh/ai-tune/sys-prompts/sys-prompts.qmd")
 fs::file_copy(
-  path = "x:/ikx/PROJECTS/sys-prompts/sys-prompts.html",
+  path = "x:/gh/ai-tune/sys-prompts/sys-prompts.html",
   new_path = "dev/sys-prompts.html",
   overwrite = TRUE
 )
