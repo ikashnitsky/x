@@ -23,10 +23,17 @@ fs::file_copy(
 
 # openspace -------------------------------------------------------------
 
-quarto_render(input = "x:/gh/ai-tune/openspace/openspace-setup.qmd")
+quarto_render(input = "x:/gh/ai-tune/openspace/openspace.qmd")
 fs::file_copy(
-  path = "x:/gh/ai-tune/openspace/openspace-setup.html",
+  path = "x:/gh/ai-tune/openspace/openspace.html",
   new_path = "dev/openspace-setup.html",
+  overwrite = TRUE
+)
+
+quarto_render(input = "x:/gh/ai-tune/openspace/OpenSpace-gemini-refactored.qmd")
+fs::file_copy(
+  path = "x:/gh/ai-tune/openspace/OpenSpace-gemini-refactored.html",
+  new_path = "dev/OpenSpace-gemini-refactored.html",
   overwrite = TRUE
 )
 
