@@ -21,6 +21,16 @@ fs::file_copy(
 )
 
 
+# r-pkg-whitelist -------------------------------------------------------------
+
+quarto_render(input = "x:/gh/r-pkg-whitelist/r-pkg-whitelist.qmd")
+fs::file_copy(
+  path = "x:/gh/r-pkg-whitelist/r-pkg-whitelist.html",
+  new_path = "dev/r-pkg-whitelist.html",
+  overwrite = TRUE
+)
+
+
 # openspace -------------------------------------------------------------
 
 quarto_render(input = "x:/gh/ai-tune/openspace/openspace.qmd")
